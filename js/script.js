@@ -27,7 +27,7 @@ function handleGenerateSubmit(e) {
 
       setTimeout(() => {
         // Get save url
-        const saveUrl = qr.querySelector("canvas").toDataURL();
+        const saveUrl = qr.querySelector("img").src;
         // Create save button
         createSaveBtn(saveUrl);
       }, 50);
