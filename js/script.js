@@ -26,10 +26,12 @@ function handleGenerateSubmit(e) {
       generateQRCode(url, size);
 
       setTimeout(() => {
-        const saveUrl = qr.querySelector("img").src;
+        // Get save url
+        const saveUrl = qr.querySelector("canvas").toDataURL();
+        // Create save button
         createSaveBtn(saveUrl);
       }, 50);
-    }, 2000);
+    }, 1000);
   }
 }
 
